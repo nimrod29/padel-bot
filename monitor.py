@@ -340,19 +340,19 @@ class PadelMonitor:
                     )
             
             # Check Lazuz clubs
-            for club_id, club_name in LAZUZ_CLUBS.items():
-                try:
-                    if self.check_lazuz_facility(club_id, club_name, check_date):
-                        notifications_sent += 1
+            # for club_id, club_name in LAZUZ_CLUBS.items():
+            #     try:
+            #         if self.check_lazuz_facility(club_id, club_name, check_date):
+            #             notifications_sent += 1
                         
-                    # Small delay between facility checks to be nice to the API
-                    time.sleep(1)
+            #         # Small delay between facility checks to be nice to the API
+            #         time.sleep(1)
                     
-                except Exception as e:
-                    logger.error(f"Error checking Lazuz club {club_name} on {check_date}: {e}")
-                    self.notifier.send_error_notification(
-                        f"Error checking Lazuz club {club_name} on {check_date}: {str(e)}"
-                    )
+            #     except Exception as e:
+            #         logger.error(f"Error checking Lazuz club {club_name} on {check_date}: {e}")
+            #         self.notifier.send_error_notification(
+            #             f"Error checking Lazuz club {club_name} on {check_date}: {str(e)}"
+            #         )
         
         return notifications_sent
     
