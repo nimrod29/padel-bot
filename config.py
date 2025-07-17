@@ -1,4 +1,5 @@
 # Configuration for Padel Game Monitor
+import os
 
 # Monitoring settings
 MIN_CONSECUTIVE_SPOTS = 3  # Minimum consecutive free spots (1.5 hours)
@@ -35,8 +36,8 @@ PADEL_ISRAEL_CONFIG = {
 }
 
 # Telegram Bot Configuration
-TELEGRAM_BOT_TOKEN = "7586648733:AAEsyD-NcKxK1kZu_z-k1xPCs6meg7lZ14o"
-TELEGRAM_CHAT_ID = "-4824881171"  # Replace with your chat ID
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")  # Replace with your chat ID
 
 # Lazuz Configuration
 LAZUZ_CLUBS = {
