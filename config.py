@@ -6,8 +6,8 @@ MIN_CONSECUTIVE_SPOTS = 3  # Minimum consecutive free spots (1.5 hours)
 ALTERNATIVE_MIN_SPOTS = 2  # Alternative minimum spots (1 hour)
 
 # Time range for monitoring (in 24-hour format)
-MONITOR_START_TIME = "18:00"  # 6:30 PM
-MONITOR_END_TIME = "00:00"  # 12:00 AM
+MONITOR_START_TIME = "18:00"  # 6:00 PM
+MONITOR_END_TIME = "23:00"  # 11:00 PM
 
 # Facility IDs for different locations
 PADEL_ISRAEL_FACILITIES = {
