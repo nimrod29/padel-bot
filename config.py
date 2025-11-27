@@ -11,8 +11,8 @@ MONITOR_END_TIME = "23:00"  # 11:00 PM
 
 # Facility IDs for different locations
 PADEL_ISRAEL_FACILITIES = {
-    "654": "Rishon Lezion",
-    "540": "Tel Aviv University",  # Add more facilities as needed
+    # "654": "Rishon Lezion",
+    # "540": "Tel Aviv University",  # Add more facilities as needed
     "652": "Hamacabiah Ramat Gan",
     "653": "Park Kfar Saba",
 }
@@ -31,8 +31,14 @@ PADEL_ISRAEL_CONFIG = {
         "Accept-Encoding": "gzip, deflate, br",
         "Token": "U2MceR_T8dUTUpMj9UFcrclmpmGES83cXJhVnFuQicPliHeRl_77_Ndd7JxyRoJ8",
         "Sentry-Trace": "4c4eb11a99e14d0982b84717b1dd791d-6791056ebe194e94-0",
-        "User-Agent": "playbypoint/2 CFNetwork/1474.1 Darwin/23.0.0",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     },
+    # REST API fallback configuration (requires authentication)
+    # These values can be set via environment variables or updated here
+    "rest_api": {
+        "cookie": os.getenv("PADEL_ISRAEL_COOKIE", ""),
+        "csrf_token": os.getenv("PADEL_ISRAEL_CSRF_TOKEN", ""),
+    }
 }
 
 # Telegram Bot Configuration

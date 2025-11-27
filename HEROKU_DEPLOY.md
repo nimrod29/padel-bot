@@ -19,9 +19,15 @@ heroku create your-padel-monitor-app-name
 ### 3. Set Environment Variables
 Replace with your actual values:
 ```bash
-heroku config:set TELEGRAM_BOT_TOKEN="7586648733:AAEsyD-NcKxK1kZu_z-k1xPCs6meg7lZ14o"
-heroku config:set TELEGRAM_CHAT_ID="-4824881171"
+heroku config:set TELEGRAM_BOT_TOKEN="your-telegram-bot-token"
+heroku config:set TELEGRAM_CHAT_ID="your-chat-id"
+
+# Optional: For REST API fallback (if GraphQL gets 403)
+heroku config:set PADEL_ISRAEL_COOKIE="your-cookie-header"
+heroku config:set PADEL_ISRAEL_CSRF_TOKEN="your-csrf-token"
 ```
+
+**Note**: Cookie and CSRF token are optional and only needed if the GraphQL API starts returning 403 errors. These can be extracted from your browser's Developer Tools.
 
 ### 4. Deploy Code
 ```bash
